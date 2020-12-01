@@ -1,0 +1,48 @@
+﻿@model NetD_lab5_Salon.Models.Stylist
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Stylist</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="stylistFName" class="control-label"></label>
+                <input asp-for="stylistFName" class="form-control" />
+                <span asp-validation-for="stylistFName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stylistLName" class="control-label"></label>
+                <input asp-for="stylistLName" class="form-control" />
+                <span asp-validation-for="stylistLName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stylistPhonenumber" class="control-label"></label>
+                <input asp-for="stylistPhonenumber" class="form-control" />
+                <span asp-validation-for="stylistPhonenumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stylistEmail" class="control-label"></label>
+                <input asp-for="stylistEmail" class="form-control" />
+                <span asp-validation-for="stylistEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

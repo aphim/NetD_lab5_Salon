@@ -9,6 +9,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+//Make sure you import the models namespace.
+using NetD_lab5_Salon.Models;
+//Make sure the following packages are installed via the nu get package manager.
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+
 
 namespace NetD_lab5_Salon
 {
@@ -31,7 +37,7 @@ namespace NetD_lab5_Salon
             //Adding connection
             string connection = @"Server=(localdb)\mssqllocaldb;Database=ASPDatabase;Trusted_Connection=True;ConnectRetryCount=0";
             //Adding Db Context
-            //services.AddDbContext<CarContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<Saloncontext>(options => options.UseSqlServer(connection));
             /*
              
                To create database, go to tools --> Nu-Get Package Manager --> Package Manager Console --> type in command: Add-Migration InitialCreate
