@@ -1,13 +1,24 @@
-﻿@{
+﻿<!--
+Program:      Netd 3202 Lab 5 Salon Webpage
+Created by:   Jacky Yuan
+Date:         Dec 04, 2020
+Purpose:      Basic website for a hair salon
+Change log:   N/A
+-->
+@{
     ViewData["Title"] = "Contact Us";
 }
 <link href="~/css/site.css" rel="stylesheet" runat="server" type="text/css" />
 <div>
+    <!--Creates simple contact us page-->
     <h1 class="display-4">Contact Us</h1>
-    <p>You can book a general appointment via phone at (905)-905-9005 or add the extension if you would like to book an appointment with a specific stylist.
-    <br/>If you have any other inquiries, you can also reach us at jdoe@dcmail.ca.</p>
+    <p>
+        You can book a general appointment via phone at (905)-905-9005 or add the extension if you would like to book an appointment with a specific stylist.
+        <br />If you have any other inquiries, you can also reach us at jdoe@dcmail.ca.
+    </p>
 </div>
 <div>
+    <!--Hours of operation-->
     <hr />
     <h4>Hours of Operation</h4>
     <p>
@@ -23,10 +34,11 @@
 </div>
 
 <div>
+    <!--Bootstrap for adding a google maps that links to address-->
     <h4>Address</h4>
     <p>You can also come make an appointment at 15 Apple Creek Blvd. We look forward to your next visit. </p>
     <!--Google map-->
-    <div id="map-container-google-2" class="z-depth-1-half map-container" >
+    <div id="map-container-google-2" class="z-depth-1-half map-container">
         <iframe src="https://maps.google.com/maps?q=15+Apple+Creek+Blvd,+Markham,+ON+L3R+0N6&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
                 style="border:0" allowfullscreen></iframe>
     </div>

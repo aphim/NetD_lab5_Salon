@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Program:      Netd 3202 Lab 5 Salon Webpage
+//Created by:   Jacky Yuan
+//Date:         Dec 04, 2020
+//Purpose:      Basic website for a hair salon
+//Change log:   N/A
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +12,7 @@ namespace NetD_lab5_Salon.Models
 {
     public class Stylist
     {
+        //getters and setters for the stylist properties
         public int stylistID { get; set; }
 
         public string stylistFName { get; set; }
@@ -17,6 +23,7 @@ namespace NetD_lab5_Salon.Models
 
         public string fullname { get { return this.stylistFName + " " + this.stylistLName; } }
 
+        //class function used for validating the stylist inputs
         public bool vaildatestylst(string stylistFName, string stylistLName, string stylistExt)
         {
             if (string.IsNullOrEmpty(stylistFName) || string.IsNullOrEmpty(stylistLName) || string.IsNullOrEmpty(stylistExt))

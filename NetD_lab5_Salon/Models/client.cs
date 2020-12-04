@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Program:      Netd 3202 Lab 5 Salon Webpage
+//Created by:   Jacky Yuan
+//Date:         Dec 04, 2020
+//Purpose:      Basic website for a hair salon
+//Change log:   N/A
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +12,7 @@ namespace NetD_lab5_Salon.Models
 {
     public class client
     {
+        //Getters and setters for client class properties 
         public int clientID { get; set; }
 
         public string clientFName { get; set; }
@@ -17,7 +23,7 @@ namespace NetD_lab5_Salon.Models
 
         public string clientEmail { get; set; }
 
-
+        //class function used to validate inputted data
         public bool vaildateInfo(string clientFName, string clientLName, string clientPhonenumber, string clientEmail)
         {
             
@@ -39,6 +45,7 @@ namespace NetD_lab5_Salon.Models
                 }
             }
         }
+        //class function used to validate emails
         public bool IsValidEmail(string email)
         {
             try

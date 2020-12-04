@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Program:      Netd 3202 Lab 5 Salon Webpage
+//Created by:   Jacky Yuan
+//Date:         Dec 04, 2020
+//Purpose:      Basic website for a hair salon
+//Change log:   N/A
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +13,7 @@ namespace NetD_lab5_Salon.Models
 {
     public class appointment
     {
+        //Getters and Setters for appointment class properties
         public int appointmentID { get; set; }
 
         public DateTime appointmentDate { get; set; }
@@ -17,6 +24,7 @@ namespace NetD_lab5_Salon.Models
         public virtual Stylist stylist{ get; set; }
 
         public string stylistFName { get; set; }
+
         public string stylistLName { get; set; }
 
         public string fullname { get { return this.stylistFName + " " + this.stylistFName; } }

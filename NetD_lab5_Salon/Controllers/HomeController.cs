@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Program:      Netd 3202 Lab 5 Salon Webpage
+//Created by:   Jacky Yuan
+//Date:         Dec 04, 2020
+//Purpose:      Basic website for a hair salon
+//Change log:   N/A
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -18,16 +24,19 @@ namespace NetD_lab5_Salon.Controllers
             _logger = logger;
         }
 
+        //view index page
         public IActionResult Index()
         {
             return View();
         }
 
+        //view privacy policy page
         public IActionResult Privacy()
         {
             return View();
         }
 
+        //view contact us page
         public IActionResult contactus()
         {
             return View();
