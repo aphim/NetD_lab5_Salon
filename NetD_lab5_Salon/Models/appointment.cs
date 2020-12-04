@@ -16,7 +16,10 @@ namespace NetD_lab5_Salon.Models
 
         public virtual Stylist stylist{ get; set; }
 
+        public string stylistFName { get; set; }
+        public string stylistLName { get; set; }
 
+        public string fullname { get { return this.stylistFName + " " + this.stylistFName; } }
 
         public int clientID { get; set; }
 

@@ -26,17 +26,14 @@ namespace NetD_lab5_Salon.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("stylistEmail")
-                        .HasColumnType("int");
+                    b.Property<string>("stylistExt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("stylistFName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("stylistLName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("stylistPhonenumber")
-                        .HasColumnType("int");
 
                     b.HasKey("stylistID");
 
@@ -75,8 +72,8 @@ namespace NetD_lab5_Salon.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("clientEmail")
-                        .HasColumnType("int");
+                    b.Property<string>("clientEmail")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("clientFName")
                         .HasColumnType("nvarchar(max)");
@@ -84,8 +81,8 @@ namespace NetD_lab5_Salon.Migrations
                     b.Property<string>("clientLName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("clientPhonenumber")
-                        .HasColumnType("int");
+                    b.Property<string>("clientPhonenumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("clientID");
 

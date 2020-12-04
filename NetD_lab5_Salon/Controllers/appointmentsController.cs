@@ -49,7 +49,7 @@ namespace NetD_lab5_Salon.Controllers
         public IActionResult Create()
         {
             ViewData["clientID"] = new SelectList(_context.client, "clientID", "clientID");
-            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "stylistID");
+            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "fullname");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace NetD_lab5_Salon.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["clientID"] = new SelectList(_context.client, "clientID", "clientID", appointment.clientID);
-            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "stylistID", appointment.stylistID);
+            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "fullname", appointment.stylistID);
             return View(appointment);
         }
 
@@ -85,7 +85,7 @@ namespace NetD_lab5_Salon.Controllers
                 return NotFound();
             }
             ViewData["clientID"] = new SelectList(_context.client, "clientID", "clientID", appointment.clientID);
-            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "stylistID", appointment.stylistID);
+            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "fullname", appointment.stylistID);
             return View(appointment);
         }
 
@@ -122,7 +122,7 @@ namespace NetD_lab5_Salon.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["clientID"] = new SelectList(_context.client, "clientID", "clientID", appointment.clientID);
-            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "stylistID", appointment.stylistID);
+            ViewData["stylistID"] = new SelectList(_context.stylist, "stylistID", "fullname", appointment.stylistID);
             return View(appointment);
         }
 

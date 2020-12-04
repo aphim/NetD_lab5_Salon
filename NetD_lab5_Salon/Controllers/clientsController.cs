@@ -55,13 +55,21 @@ namespace NetD_lab5_Salon.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("clientID,clientFName,clientLName,clientPhonenumber,clientEmail")] client client)
         {
-            if (ModelState.IsValid)
+            if (client.vaildateInfo(client.clientFName, client.clientLName, client.clientPhonenumber, client.clientEmail) == true)
             {
-                _context.Add(client);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(client);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+
+                }
+                return View(client);
             }
-            return View(client);
+            else
+            {
+                return View("fail");
+            }
         }
 
         // GET: clients/Edit/5

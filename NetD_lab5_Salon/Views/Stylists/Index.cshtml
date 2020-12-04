@@ -19,10 +19,7 @@
                 @Html.DisplayNameFor(model => model.stylistLName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.stylistPhonenumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.stylistEmail)
+                @Html.DisplayNameFor(model => model.stylistExt)
             </th>
             <th></th>
         </tr>
@@ -37,10 +34,7 @@
                 @Html.DisplayFor(modelItem => item.stylistLName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.stylistPhonenumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.stylistEmail)
+                @Html.DisplayFor(modelItem => item.stylistExt)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.stylistID">Edit</a> |

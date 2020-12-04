@@ -15,8 +15,8 @@ namespace NetD_lab5_Salon.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     clientFName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     clientLName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    clientPhonenumber = table.Column<int>(type: "int", nullable: false),
-                    clientEmail = table.Column<int>(type: "int", nullable: false)
+                    clientPhonenumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    clientEmail = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -31,8 +31,7 @@ namespace NetD_lab5_Salon.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     stylistFName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     stylistLName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    stylistPhonenumber = table.Column<int>(type: "int", nullable: false),
-                    stylistEmail = table.Column<int>(type: "int", nullable: false)
+                    stylistExt = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

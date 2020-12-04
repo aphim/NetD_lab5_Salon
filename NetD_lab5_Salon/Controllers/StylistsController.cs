@@ -53,15 +53,22 @@ namespace NetD_lab5_Salon.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("stylistID,stylistFName,stylistLName,stylistPhonenumber,stylistEmail")] Stylist stylist)
+        public async Task<IActionResult> Create([Bind("stylistID,stylistFName,stylistLName,stylistExt")] Stylist stylist)
         {
-            if (ModelState.IsValid)
+            if (stylist.vaildatestylst(stylist.stylistFName, stylist.stylistLName, stylist.stylistExt))
             {
-                _context.Add(stylist);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(stylist);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(stylist);
             }
-            return View(stylist);
+            else
+            {
+                return View("fail");
+            }
         }
 
         // GET: Stylists/Edit/5
@@ -85,7 +92,7 @@ namespace NetD_lab5_Salon.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("stylistID,stylistFName,stylistLName,stylistPhonenumber,stylistEmail")] Stylist stylist)
+        public async Task<IActionResult> Edit(int id, [Bind("stylistID,stylistFName,stylistLName,stylistExt")] Stylist stylist)
         {
             if (id != stylist.stylistID)
             {

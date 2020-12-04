@@ -35,7 +35,7 @@ namespace NetD_lab5_Salon
             //Here, we disable endpoint routing. This was an issue when upgrading from ASP.NET CORE 2.0 to ASP.NET Core 3.0
             services.AddMvc(options => options.EnableEndpointRouting = false);
             //Adding connection
-            string connection = @"Server=(localdb)\mssqllocaldb;Database=ASPDatabase;Trusted_Connection=True;ConnectRetryCount=0";
+            string connection = @"Server=(localdb)\mssqllocaldb;Database=salonDB;Trusted_Connection=True;ConnectRetryCount=0";
             //Adding Db Context
             services.AddDbContext<Saloncontext>(options => options.UseSqlServer(connection));
             /*
